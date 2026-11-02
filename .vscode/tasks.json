@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}"
+  },
+  "tasks": [
+    {
+      "label": "Arsip: dev (server + frontend)",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Arsip: build + produksi (localhost:4000)",
+      "type": "shell",
+      "command": "npm run build && npm start",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Arsip: reset data contoh (seed ulang)",
+      "type": "shell",
+      "command": "Remove-Item server\\data\\efiling.db* -ErrorAction SilentlyContinue; Remove-Item server\\uploads\\*.pdf -ErrorAction SilentlyContinue; npm start",
+      "problemMatcher": []
+    },
+    {
+      "label": "Arsip: install semua dependency",
+      "type": "shell",
+      "command": "npm install; npm --prefix server install; npm --prefix client install",
+      "problemMatcher": []
+    }
+  ]
+}

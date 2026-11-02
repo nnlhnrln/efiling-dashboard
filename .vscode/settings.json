@@ -1,0 +1,26 @@
+{
+  "terminal.integrated.env.windows": {
+    "PATH": "${workspaceFolder}\\.tools\\node-v22.14.0-win-x64;${env:PATH}"
+  },
+  "terminal.integrated.env.linux": {
+    "PATH": "${workspaceFolder}/.tools/node-v22.14.0-win-x64:${env:PATH}"
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.formatOnSave": false,
+  "files.exclude": {
+    "**/node_modules": true,
+    ".tools": true,
+    "client/dist": true,
+    "server/data": true,
+    "server/uploads": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    ".tools/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "client/dist": true,
+    ".tools": true
+  }
+}

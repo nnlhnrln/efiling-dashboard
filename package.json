@@ -1,0 +1,15 @@
+{
+  "name": "efiling-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dashboard Kearsipan Elektronik (Electronic Filing System) - React + Vite + Tailwind + Express + SQLite",
+  "scripts": {
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "node server/src/index.js",
+    "seed": "node server/src/seed.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
